@@ -1,13 +1,13 @@
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
-import { prisma } from '../../../database/prismaClient'
+import { prisma } from '../../../../database/prismaClient'
 
 interface IAuthenticateClient {
   password: string
   username: string
 }
 
-class AuthenticateUseCase {
+class AuthenticateClientUseCase {
   async execute({ password, username }: IAuthenticateClient): Promise<string> {
     const client = await prisma.clients.findFirst({ where: { username } })
     if (!client) throw new Error('Username or password is invalid')
@@ -21,4 +21,4 @@ class AuthenticateUseCase {
   }
 }
 
-export { AuthenticateUseCase }
+export { AuthenticateClientUseCase }
