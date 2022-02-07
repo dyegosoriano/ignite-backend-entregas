@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { CreateClientUseCase } from './CreateClientUseCase'
 
-class CreateClientController {
+export class CreateClientController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { password, username } = request.body
 
@@ -12,5 +12,3 @@ class CreateClientController {
     return response.status(201).json(client)
   }
 }
-
-export { CreateClientController }
