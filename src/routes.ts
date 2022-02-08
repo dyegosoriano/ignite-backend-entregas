@@ -5,7 +5,7 @@ import { AuthenticateClientController } from './modules/account/useCases/authent
 import { AuthenticateDeliverymanController } from './modules/account/useCases/authenticateDeliveryman/AuthenticateDeliverymanController'
 import { CreateClientController } from './modules/clients/useCases/createClient/CreateClientController'
 import { CreateDeliveryController } from './modules/deliveries/useCases/createDelivery/CreateDeliveryController'
-import { FindAllAvailableController } from './modules/deliveries/useCases/findAllAvailableUseCase/FindAllAvailableController'
+import { FindAllAvailableController } from './modules/deliveries/useCases/findAllAvailable/FindAllAvailableController'
 import { CreateDeliverymanController } from './modules/deliveryman/useCases/createDeliveryman/CreateDeliverymanController'
 
 const authenticateDeliverymanController = new AuthenticateDeliverymanController()
