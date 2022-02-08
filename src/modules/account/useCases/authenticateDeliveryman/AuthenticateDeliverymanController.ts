@@ -1,11 +1,11 @@
 import { Request, Response } from 'express'
-import { AuthenticateClientUseCase } from '../authenticateClient/AuthenticateClientUseCase'
+import { AuthenticateDeliverymanUseCase } from './AuthenticateDeliverymanUseCase'
 
 export class AuthenticateDeliverymanController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { password, username } = request.body
 
-    const authenticateDeliverymanUseCase = new AuthenticateClientUseCase()
+    const authenticateDeliverymanUseCase = new AuthenticateDeliverymanUseCase()
 
     const token = await authenticateDeliverymanUseCase.execute({ password, username })
 
